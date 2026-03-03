@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar anuncio – SegundaVida</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+</head>
+<body data-page="publicar">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Segunda<span>Vida</span></a>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar artículos...">
+        <button aria-label="Buscar">🔍</button>
+      </div>
+      <div class="header-actions">
+        <a href="#" class="btn-header btn-login">Iniciar sesión</a>
+        <a href="publicar.html" class="btn-header btn-publish">+ Publicar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span>›</span>
+    Publicar anuncio
+  </div>
+
+  <!-- FORM -->
+  <div class="form-page">
+    <h1 class="page-title">Publicar anuncio</h1>
+
+    <form id="formPublicar" novalidate>
+
+      <!-- FOTOS -->
+      <div class="form-card">
+        <h3>📷 Fotos del artículo</h3>
+        <p style="font-size:13px; color:#6b7280; margin-bottom:14px;">
+          Agregá hasta 4 fotos. La primera será la foto principal del anuncio.
+        </p>
+        <div class="photo-upload-grid">
+          <div class="photo-slot">
+            <div class="photo-slot-icon">📷</div>
+            <div class="photo-slot-text">Agregar foto</div>
+            <input type="file" class="photo-input" accept="image/*">
+          </div>
+          <div class="photo-slot">
+            <div class="photo-slot-icon">+</div>
+            <div class="photo-slot-text">Agregar foto</div>
+            <input type="file" class="photo-input" accept="image/*">
+          </div>
+          <div class="photo-slot">
+            <div class="photo-slot-icon">+</div>
+            <div class="photo-slot-text">Agregar foto</div>
+            <input type="file" class="photo-input" accept="image/*">
+          </div>
+          <div class="photo-slot">
+            <div class="photo-slot-icon">+</div>
+            <div class="photo-slot-text">Agregar foto</div>
+            <input type="file" class="photo-input" accept="image/*">
+          </div>
+        </div>
+      </div>
+
+      <!-- DETALLES -->
+      <div class="form-card">
+        <h3>📝 Detalles del artículo</h3>
+
+        <div class="form-group">
+          <label class="form-label" for="titulo">
+            Título <span class="required-mark">*</span>
+          </label>
+          <input
+            class="form-input"
+            id="titulo"
+            type="text"
+            placeholder="Ej: Vestido de novia talla S/M – Usado solo una vez"
+            required
+            maxlength="100"
+          >
+          <p class="form-hint">Sé descriptiva. Mencioná marca, talla y estado.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            Categoría <span class="required-mark">*</span>
+          </label>
+          <select class="form-select" required>
+            <option value="">Seleccioná una categoría</option>
+            <option value="mujer" selected>Mujer › Ropa › Vestidos</option>
+            <option value="accesorios">Mujer › Accesorios</option>
+            <option value="calzado">Mujer › Calzado</option>
+            <option value="hombre">Hombre › Ropa</option>
+            <option value="hogar">Hogar y jardín</option>
+            <option value="electronica">Electrónica</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            Estado <span class="required-mark">*</span>
+          </label>
+          <div class="condition-options">
+            <div class="condition-option">
+              <input type="radio" name="estado" id="estado-nuevo" value="Nuevo con etiqueta">
+              <label for="estado-nuevo">Nuevo con etiqueta</label>
+            </div>
+            <div class="condition-option">
+              <input type="radio" name="estado" id="estado-cominuevo" value="Como nuevo" checked>
+              <label for="estado-cominuevo">Como nuevo</label>
+            </div>
+            <div class="condition-option">
+              <input type="radio" name="estado" id="estado-bueno" value="Buen estado">
+              <label for="estado-bueno">Buen estado</label>
+            </div>
+            <div class="condition-option">
+              <input type="radio" name="estado" id="estado-usado" value="Usado">
+              <label for="estado-usado">Usado</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="talla">Talla</label>
+          <select class="form-select" id="talla">
+            <option value="">Seleccioná la talla</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="S/M" selected>S/M</option>
+            <option value="M">M</option>
+            <option value="M/L">M/L</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="Talle único">Talle único</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- PRECIO Y UBICACIÓN -->
+      <div class="form-card">
+        <h3>💰 Precio y ubicación</h3>
+
+        <div class="form-group">
+          <label class="form-label" for="precio">
+            Precio <span class="required-mark">*</span>
+          </label>
+          <div class="price-input-wrap">
+            <span class="price-currency">$</span>
+            <input
+              class="form-input"
+              id="precio"
+              type="number"
+              min="0"
+              placeholder="0"
+              required
+            >
+          </div>
+          <p class="form-hint">Podés negociar el precio con los interesados.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ubicacion">
+            Ubicación <span class="required-mark">*</span>
+          </label>
+          <input
+            class="form-input"
+            id="ubicacion"
+            type="text"
+            placeholder="Ej: Palermo, Buenos Aires"
+            required
+          >
+        </div>
+      </div>
+
+      <!-- DESCRIPCIÓN -->
+      <div class="form-card">
+        <h3>✏️ Descripción</h3>
+        <div class="form-group">
+          <label class="form-label" for="descripcion">
+            Contale a los compradores sobre tu artículo
+          </label>
+          <textarea
+            class="form-textarea"
+            id="descripcion"
+            placeholder="Ej: Vestido de novia comprado para mi casamiento. Lo usé solo ese día y está en perfecto estado. Tiene encaje en el escote y una pequeña cola. Incluye velo. No hago envíos, solo en mano."
+          ></textarea>
+          <p class="form-hint">Incluí detalles como marca, medidas, si incluye accesorios, etc.</p>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="submit" class="btn-submit">
+        Publicar anuncio gratis →
+      </button>
+
+    </form>
+  </div>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true">
+    <div class="success-icon">🎉</div>
+    <h2 class="success-title">¡Anuncio publicado!</h2>
+    <p class="success-subtitle">
+      Tu vestido ya está disponible para miles de personas.<br>
+      Te avisamos cuando alguien se interese.
+    </p>
+    <a href="vestido.html" class="btn-view-listing">Ver mi anuncio →</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>SegundaVida</h4>
+        <a href="#">Cómo funciona</a>
+        <a href="#">Quiénes somos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vendedores</h4>
+        <a href="publicar.html">Publicar gratis</a>
+        <a href="#">Consejos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SegundaVida · Compra y vende de forma segura
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

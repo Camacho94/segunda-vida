@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestido de novia – SegundaVida</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♻</text></svg>">
+</head>
+<body data-page="vestido">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Segunda<span>Vida</span></a>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar artículos...">
+        <button aria-label="Buscar">🔍</button>
+      </div>
+      <div class="header-actions">
+        <a href="#" class="btn-header btn-login">Iniciar sesión</a>
+        <a href="publicar.html" class="btn-header btn-publish">+ Publicar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span>›</span>
+    <a href="#">Mujer</a>
+    <span>›</span>
+    <a href="#">Ropa</a>
+    <span>›</span>
+    <a href="#">Vestidos</a>
+    <span>›</span>
+    <span id="listingTitleBread">Vestido de novia</span>
+  </div>
+
+  <!-- LISTING DETAIL -->
+  <div class="listing-detail-wrap">
+    <div class="listing-detail">
+
+      <!-- LEFT: GALLERY -->
+      <div class="listing-gallery">
+        <!-- Main Photo -->
+        <div class="gallery-main">
+          <img
+            id="mainPhoto"
+            src=""
+            alt="Vestido de novia"
+            style="display:none;"
+          >
+          <div
+            id="mainPhotoPlaceholder"
+            style="
+              width:100%;
+              height:100%;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              font-size:120px;
+              background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 50%, #ede9fe 100%);
+            "
+          >👗</div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb active" id="thumb-0">
+            <img src="" alt="Foto 1" style="display:none;">
+            <div class="gallery-thumb-placeholder" style="background: linear-gradient(135deg, #fce7f3, #f3e8ff);">👗</div>
+          </div>
+          <div class="gallery-thumb" id="thumb-1">
+            <img src="" alt="Foto 2" style="display:none;">
+            <div class="gallery-thumb-placeholder" style="background: linear-gradient(135deg, #f3e8ff, #ede9fe);">✨</div>
+          </div>
+          <div class="gallery-thumb" id="thumb-2">
+            <img src="" alt="Foto 3" style="display:none;">
+            <div class="gallery-thumb-placeholder" style="background: linear-gradient(135deg, #ede9fe, #e0f2fe);">💍</div>
+          </div>
+          <div class="gallery-thumb" id="thumb-3">
+            <img src="" alt="Foto 4" style="display:none;">
+            <div class="gallery-thumb-placeholder" style="background: linear-gradient(135deg, #fce7f3, #fbcfe8);">🌸</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: INFO CARD -->
+      <div>
+        <div class="listing-info-card">
+
+          <!-- Price & Title -->
+          <div class="listing-price" id="listingPrice">$45.000</div>
+          <h1 class="listing-title" id="listingTitle">Vestido de novia talla S/M – Usado solo una vez</h1>
+
+          <!-- Condition badge -->
+          <div class="listing-condition-badge" id="listingCondition">Como nuevo</div>
+
+          <!-- Meta row -->
+          <div class="listing-meta-row">
+            <span>📍 <span id="listingUbicacion">Buenos Aires, CABA</span></span>
+            <span>🕐 <span id="listingTiempo">Hace 2 horas</span></span>
+          </div>
+
+          <!-- Stats -->
+          <div class="listing-stats">
+            <span>👁 <strong id="viewCount">47</strong> visitas</span>
+            <span>❤️ <strong id="likesCount">12</strong> guardados</span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <button class="btn-contact" id="btnContact">
+            💬 Contactar a la vendedora
+          </button>
+
+          <button class="btn-favorite" id="likeBtn">
+            <span class="heart-icon">🤍</span>
+            <span class="like-text">Guardar en favoritos</span>
+          </button>
+
+          <button class="btn-share" id="btnShare">
+            🔗 Compartir anuncio
+          </button>
+        </div>
+
+        <!-- SELLER CARD -->
+        <div class="seller-card">
+          <div class="seller-info">
+            <div class="seller-avatar">M</div>
+            <div>
+              <div class="seller-name" id="sellerName">Mariana G.</div>
+              <div class="seller-meta">Miembro desde 2023</div>
+              <div class="seller-rating">★★★★★ <span style="color:#6b7280;">(18 reseñas)</span></div>
+            </div>
+          </div>
+          <div class="seller-badge">
+            ✓ Identidad verificada
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DESCRIPTION SECTION -->
+    <div class="description-section">
+      <h3>Descripción</h3>
+      <p id="listingDescription">
+        Vendo mi vestido de novia. Lo usé solo el día del casamiento, está en perfectas condiciones.
+
+Tiene escote en V, falda con cola corta y detalles de encaje en el corset. Color blanco marfil.
+
+Talla S/M (ajustable con corsé). Incluye velo y aro de flores. Lo entrego con funda original.
+
+No hago envíos. Precio negociable para una buena persona 💛
+      </p>
+
+      <table class="details-table">
+        <tr>
+          <td>Estado</td>
+          <td id="listingConditionDetail">Como nuevo</td>
+        </tr>
+        <tr>
+          <td>Talla</td>
+          <td id="listingTalla">S/M</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>Blanco marfil</td>
+        </tr>
+        <tr>
+          <td>Incluye</td>
+          <td>Velo y aro de flores</td>
+        </tr>
+        <tr>
+          <td>Entrega</td>
+          <td>Solo en mano</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- RELATED LISTINGS -->
+    <div class="related-section">
+      <div class="section-header">
+        <h2 class="section-title">Anuncios similares</h2>
+        <a href="#" class="section-link">Ver más →</a>
+      </div>
+
+      <div class="listing-grid">
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">👗</div>
+          <div class="card-body">
+            <div class="card-price">$32.000</div>
+            <div class="card-title">Vestido de novia corte sirena – Talla M</div>
+            <div class="card-meta">
+              <span class="card-condition">Buen estado</span>
+              <span>La Plata</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);">👰</div>
+          <div class="card-body">
+            <div class="card-price">$58.000</div>
+            <div class="card-title">Vestido de novia con bordados – Talla S</div>
+            <div class="card-meta">
+              <span class="card-condition">Como nuevo</span>
+              <span>Rosario</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);">✨</div>
+          <div class="card-body">
+            <div class="card-price">$27.500</div>
+            <div class="card-title">Vestido de novia civil largo – Usado una vez</div>
+            <div class="card-meta">
+              <span class="card-condition">Como nuevo</span>
+              <span>Córdoba</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);">💒</div>
+          <div class="card-body">
+            <div class="card-price">$41.000</div>
+            <div class="card-title">Vestido de novia con encaje – Talla M/L</div>
+            <div class="card-meta">
+              <span class="card-condition">Como nuevo</span>
+              <span>Mar del Plata</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);">💐</div>
+          <div class="card-body">
+            <div class="card-price">$19.000</div>
+            <div class="card-title">Velo de novia largo + accesorios</div>
+            <div class="card-meta">
+              <span class="card-condition">Nuevo</span>
+              <span>Mendoza</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="listing-card">
+          <div class="card-image-placeholder" style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);">👠</div>
+          <div class="card-body">
+            <div class="card-price">$8.500</div>
+            <div class="card-title">Zapatos de novia blancos N°37 – Sin uso</div>
+            <div class="card-meta">
+              <span class="card-condition">Nuevo</span>
+              <span>Palermo</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAT MODAL -->
+  <div class="modal-overlay" id="chatModal" role="dialog" aria-modal="true" aria-label="Contactar vendedora">
+    <div class="chat-modal">
+      <div class="chat-modal-header">
+        <h3>Escribile a Mariana</h3>
+        <button class="btn-close-modal" id="btnCloseModal" aria-label="Cerrar">✕</button>
+      </div>
+      <p>Podés preguntarle sobre el artículo, coordinar la entrega o negociar el precio.</p>
+      <textarea
+        class="chat-message-input"
+        placeholder="Hola! Me interesa tu vestido de novia. ¿Seguís teniéndolo disponible?"
+      ></textarea>
+      <div class="chat-modal-actions">
+        <button class="btn-cancel" id="btnCancelModal">Cancelar</button>
+        <button class="btn-send" id="btnSendMsg">Enviar mensaje →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>SegundaVida</h4>
+        <a href="#">Cómo funciona</a>
+        <a href="#">Quiénes somos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vendedores</h4>
+        <a href="publicar.html">Publicar gratis</a>
+        <a href="#">Consejos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SegundaVida · Compra y vende de forma segura
+    </div>
+  </footer>
+
+  <script>
+    // Sync condition badge in description table from main badge
+    window.addEventListener('load', () => {
+      const cond = document.getElementById('listingCondition');
+      const condDetail = document.getElementById('listingConditionDetail');
+      if (cond && condDetail) condDetail.textContent = cond.textContent;
+
+      // Cancel button in modal
+      document.getElementById('btnCancelModal').addEventListener('click', () => {
+        document.getElementById('chatModal').classList.remove('open');
+      });
+    });
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
