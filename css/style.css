@@ -1036,11 +1036,21 @@ body {
 @media (max-width: 600px) {
   .hero-banner { flex-direction: column; text-align: center; padding: 24px 20px; }
   .hero-emoji { display: none; }
-  .listing-grid { grid-template-columns: repeat(2, 1fr); }
+  .listing-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .card-image { aspect-ratio: 4/3; }
+  .card-image-placeholder { aspect-ratio: 4/3; font-size: 40px; }
+  .card-body { padding: 8px 10px 10px; }
+  .card-price { font-size: 16px; }
+  .card-title { font-size: 13px; }
   .photo-upload-grid { grid-template-columns: repeat(2, 1fr); }
   .header-actions .btn-login { display: none; }
   .condition-options { flex-direction: column; }
   .condition-option { min-width: auto; }
   .search-bar button { font-size: 0; padding: 0 14px; }
   .search-bar button::after { content: '🔍'; font-size: 16px; }
+}
+
+@media (max-width: 380px) {
+  .listing-grid { grid-template-columns: 1fr; }
+  .card-image { aspect-ratio: 16/9; }
 }
